@@ -7,7 +7,7 @@ title: Hello,world
 subtitle:
 description: 学习 生活 笔记 理解
 author: ILNILEY
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -85,6 +85,7 @@ admin:
   username: ilniley
   password_hash: $2a$10$rB48RO5mk7nOcgiMMsTHGOxm7Wpe07n4jgh/bg9FYotoFJZdZqPIu
   secret: hexo blog
+  deployCommand: './admin_script/hexo-generate.sh'
 
 metadata:
   author_id: ILNILEY
