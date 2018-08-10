@@ -15,11 +15,11 @@ date: 2018-08-09 15:23:00
 
 第一点我参考了按照简书上一篇[博客](https://www.jianshu.com/p/68e727dda16d)搞了一套楼主所谓的优雅的方式，鼓捣了一天云服务器，买了域名（其实就是想装逼做全套）。结果发现这种方式并不优雅。
 
-首先，hexo-admin这个东西 也就是我现在在用着写这篇博文的东西 依赖hexo-server，而hexo-server这个玩意儿并不好用;所以，如果按照简书楼主所说的用nginx作为页面容器的话，除了nginx起的服务之外，还需要用hexo-server另外起一个服务；如果用hexo-server这个起服务的话，如果我断开与服务器的连接的话，它也就跟着断了。所以，又要让它这个服务一直能运行。于是又用pm2维系它的生命。还有一个点，我至今还未找到原因，就是配置nginx访问generate结果输出的那个文件夹的话，我利用hexo-admin发表博客，nginx开的80端口访问的内容呢并不能及时更新，而hexo-server开的4000端口可以及时更新。最近秋招旺季，这个问题只能等我空一点的时候再排查了。
+首先，hexo-admin这个东西 也就是我现在在用着写这篇博文的东西 依赖hexo-server，而hexo-server这个玩意儿并不好用;所以，如果按照简书楼主所说的用nginx作为页面容器的话，除了nginx起的服务之外，还需要用hexo-server另外起一个服务；如果用hexo-server这个起服务的话，如果我断开与服务器的连接的话，它也就跟着断了。所以，又要让它这个服务一直能运行。于是又用pm2维系它的生命。还有一个点，我至今还未找到原因，就是配置nginx访问generate结果输出的那个文件夹的话，我利用hexo-admin发表博客，nginx开的80端口访问的内容呢并不能及时更新，而hexo-server开的4000端口可以及时更新。这个问题只能等我空一点的时候再排查了。
 
 其实鼓捣了这么多，只是为了用hexo-admin。github pages这个用来访问静态博客完全没有任何问题，而且hexo丰富的插件真的可以让你逼格很高。但是hexo-admin不能用在静态服务上。
 
-hexo整个原理其实是模板解析生成html文件。想要博客好看一点，改改配置，写几句css样式就好了。至于七七八八的一堆优化，网路上一堆总结。我参考了[hexo的next主题个性化配置教程](https://segmentfault.com/a/1190000009544924#articleHeader19) 和 [某个小姐姐的hexo博客](https://asdfv1929.github.io/categories/GitBlog/)。话说这个小姐姐的博客真的可以说是配置教程里的live版。要做这么一个博客可以参考[关于HEXO搭建个人博客的点点滴滴](https://juejin.im/post/5a6ee00ef265da3e4b770ac1)[GitHub+Hexo 搭建个人网站详细教程](https://zhuanlan.zhihu.com/p/26625249)这么两个教程，还有一个小姐姐写了[浅析hexo搭建博客原理](https://juejin.im/post/598eeaff5188257d592e55bb)也可以看看。
+hexo整个原理其实是模板解析生成html文件。想要博客好看一点，改改配置，写几句css样式就好了。至于七七八八的一堆优化，网路上一堆总结。我参考了[hexo的next主题个性化配置教程](https://segmentfault.com/a/1190000009544924#articleHeader19) 和 [某个小姐姐的hexo博客](https://asdfv1929.github.io/categories/GitBlog/)。话说这个小姐姐的博客真的可以说是配置教程里的live版。要做这么一个博客可以参考[关于HEXO搭建个人博客的点点滴滴](https://juejin.im/post/5a6ee00ef265da3e4b770ac1)[GitHub+Hexo 搭建个人网站详细教程](https://zhuanlan.zhihu.com/p/26625249)这么两个教程，还有一个小姐姐写了[浅析hexo搭建博客原理](https://juejin.im/post/598eeaff5188257d592e55bb)也可以看看。另外建议在配置theme的时候，如果是用next这种，不妨 #在github上先fork一份，然后作为submodule进行管理#，这么做管理会很方便的。
 
 目前我的博客还存在一些问题：首先是，首页渲染时间太长，原因呢出在我把图片全都仍在了source文件夹下，加载一个bg就要九秒了这个真的很要命；其次是，这个next主题的样式有点bug，就是在拉到最底的时候sidebar button被footer挡住了就根本点不了；还有一个问题是这个hexo-admin的问题，我发现这个hexo-admin的login有点鸡肋阿，这个本意做权限控制但是没有做路由拦截...；评论用来必力加载速度不是一般的慢阿，下次改用gitment试试；还有就是统计值这个，还得去leanCloud搞个appid和key...
 
