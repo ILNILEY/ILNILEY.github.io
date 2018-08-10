@@ -85,7 +85,7 @@ admin:
   username: ilniley
   password_hash: $2a$10$rB48RO5mk7nOcgiMMsTHGOxm7Wpe07n4jgh/bg9FYotoFJZdZqPIu
   secret: hexo blog
-  deployCommand: './admin_script/hexo-generate.sh'
+  deployCommand: './hexo-generate.sh'
 
 metadata:
   author_id: ILNILEY
