@@ -16,9 +16,9 @@ const ap = new APlayer({
         cover: './images/cover.jpg',
       },
       {
-        name: "瞬き",
-        artist: '春茶',
-        url: 'http://www.kugou.com/song/li8zd28.html?frombaidu#hash=FCECED6B3E34490444ECD52E639BADC7&album_id=0',
+        name: "The trust is that you leave",
+        artist: 'pure',
+        url: 'http://www.ytmp3.cn/down/49373.mp3',
         cover: './images/cover.jpg',
       }
     ]
