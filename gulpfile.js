@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const gulp = require('gulp');
 const minifyCss = require('gulp-minify-css');
 const minifyImg = require('gulp-imagemin');
@@ -24,3 +25,9 @@ gulp.task('image',()=>{
 
 });
 gulp.task('default',['css','js','image']);
+=======
+var gulp = require('gulp');
+gulp.task('default',function(){
+
+});
+>>>>>>> bcc078cd7e0f4c6215b4a0faff96357686af3350
